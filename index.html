@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+      <button
+        data-method="offset"
+        data-type="auto"
+        class="layui-btn layui-btn-normal"
+      >
+        居中弹出
+      </button>
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./dialog.js"></script>
+    <script>
+      $("#layerDemo .layui-btn").on("click", function() {
+        new Layer({
+          content: "<h3>hello</h3>",
+          shade: 0,
+          title: '信息',
+          yes: function() {
+          }
+        });
+        
+      });
+    </script>
+  </body>
+</html>
